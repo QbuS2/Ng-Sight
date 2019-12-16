@@ -1,3 +1,4 @@
+import { ChartsModule } from 'ng2-charts';
 import { appRoutes } from './../routes';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,6 +11,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { SectionSalesComponent } from './sections/section-sales/section-sales.component';
 import { SesctionOrdersComponent } from './sections/sesction-orders/sesction-orders.component';
 import { SesctionHealthComponent } from './sections/sesction-health/sesction-health.component';
+import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
+import { LineChartComponent } from './charts/line-chart/line-chart.component';
+import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +22,16 @@ import { SesctionHealthComponent } from './sections/sesction-health/sesction-hea
     SidebarComponent,
     SectionSalesComponent,
     SesctionOrdersComponent,
-    SesctionHealthComponent
+    SesctionHealthComponent,
+    BarChartComponent,
+    LineChartComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
